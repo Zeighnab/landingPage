@@ -1,5 +1,4 @@
 const labels = document.querySelectorAll('.form-control label')
-const toggles = document.querySelectorAll('.toggle')
 const nav = document.querySelector('.navbar')
 const container = document.querySelector('.container');
 const openBtn = document.getElementById('navbtn')
@@ -11,13 +10,6 @@ labels.forEach((label) => {
     .split('')
     .map((letter, idx) => `<span style="transition-delay: ${idx * 50}ms">${letter}</span>`)
     .join('')
-})
-
-toggles.forEach(toggle => {
-    toggle.addEventListener('change', () => {
-      nav.classList.toggle('active');
-      container.classList.toggle('active');
-    });
 })
 
 openBtn.addEventListener('click', () => {
